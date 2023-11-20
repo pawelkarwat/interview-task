@@ -7,7 +7,7 @@ import { GithubUser } from './github.interface';
   providedIn: 'root',
 })
 export class GitHubService {
-  private GITHUB_URL = 'https://api.github.com';
+  private readonly GITHUB_URL = 'https://api.github.com';
 
   constructor(private readonly http: HttpClient) {}
 
