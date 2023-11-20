@@ -1,0 +1,8 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> User: {{ githubUser.login }} </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ng-container *ngFor="let item of githubUser | keyvalue">
+    <p *ngIf="item.value">{{ item.key }}: {{ item.value }}</p>
+  </ng-container>
+</mat-expansion-panel>

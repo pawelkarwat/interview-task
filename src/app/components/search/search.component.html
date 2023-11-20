@@ -1,0 +1,11 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <mat-form-field class="example-full-width">
+    <span matPrefix> </span>
+    <input type="tel" matInput placeholder="Search" name= "search" formControlName="search" (input)="onSearch()">
+    <button type="submit" matSuffix mat-button><mat-icon >search</mat-icon></button>
+  </mat-form-field>
+</form>
+
+<app-not-found *ngIf="notFound"></app-not-found>
+<app-error *ngIf="error"></app-error>
+<app-result *ngIf="result" [githubUser]="result"></app-result>
